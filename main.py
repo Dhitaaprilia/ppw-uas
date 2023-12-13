@@ -17,8 +17,8 @@ if button:
     tfidf_matrics = vectorizer.transform([text]).toarray()
     
     # Predict Model Naive Bayes Reduksi
-    model_reduksi = joblib.load("nb.pkl")
-    lda = joblib.load("lda.pkl")
+    model_reduksi = joblib.load("nb (1).pkl")
+    lda = joblib.load("lda (1).pkl")
     lda_transform = lda.transform(tfidf_matrics)
     prediction_reduksi = model_reduksi.predict(lda_transform)
     st.session_state.nb_reduksi = prediction_reduksi[0]
